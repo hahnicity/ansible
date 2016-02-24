@@ -1527,7 +1527,7 @@ class AnsibleModule(object):
            - opt_dirs:  optional list of directories to search in addition to PATH
         if found return full path; otherwise return None
         '''
-        sbin_paths = ['/sbin', '/usr/sbin', '/usr/local/sbin']
+        sbin_paths = ['/sbin', '/usr/sbin', '/usr/local/sbin', '/usr/local/bin']
         paths = []
         for d in opt_dirs:
             if d is not None and os.path.exists(d):
